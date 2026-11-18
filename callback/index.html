@@ -1,0 +1,7 @@
+<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tesla sign-in</title>
+<body style="font-family:system-ui;padding:24px;max-width:560px">
+<h2>Almost done</h2><p>Copy this sign-in code and give it to Paola in the secure field:</p>
+<textarea id="c" readonly style="width:100%;height:90px;font-size:15px"></textarea>
+<p><button onclick="navigator.clipboard.writeText(document.getElementById('c').value)">Copy code</button></p>
+<script>var p=new URLSearchParams(location.search);document.getElementById('c').value=p.get('code')||('No code found. '+(p.get('error_description')||p.get('error')||''));</script>
+</body>
